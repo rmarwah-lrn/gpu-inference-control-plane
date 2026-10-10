@@ -1,0 +1,132 @@
+apiVersion: v1
+items:
+- apiVersion: keda.sh/v1alpha1
+  kind: ScaledObject
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"keda.sh/v1alpha1","kind":"ScaledObject","metadata":{"annotations":{},"name":"decode-scaler","namespace":"default"},"spec":{"maxReplicaCount":2,"minReplicaCount":1,"scaleTargetRef":{"name":"vllm-decode"},"triggers":[{"metadata":{"query":"max(vllm:kv_cache_usage_perc)","serverAddress":"http://prometheus-server.monitoring.svc.cluster.local","threshold":"1"},"metricType":"AverageValue","type":"prometheus"}]}}
+    creationTimestamp: "2026-10-09T20:35:09Z"
+    finalizers:
+    - finalizer.keda.sh
+    generation: 2
+    labels:
+      scaledobject.keda.sh/name: decode-scaler
+    name: decode-scaler
+    namespace: default
+    resourceVersion: "20246"
+    uid: c8dfa77f-fc4d-43b2-adb8-0aa188a9c8ba
+  spec:
+    maxReplicaCount: 2
+    minReplicaCount: 1
+    scaleTargetRef:
+      name: vllm-decode
+    triggers:
+    - metadata:
+        query: max(vllm:kv_cache_usage_perc)
+        serverAddress: http://prometheus-server.monitoring.svc.cluster.local
+        threshold: "1"
+      metricType: AverageValue
+      type: prometheus
+  status:
+    authenticationsTypes: ""
+    conditions:
+    - message: ScaledObject is defined correctly and is ready for scaling
+      reason: ScaledObjectReady
+      status: "True"
+      type: Ready
+    - message: Scaling is performed because triggers are active
+      reason: ScalerActive
+      status: "True"
+      type: Active
+    - message: No fallbacks are active on this scaled object
+      reason: NoFallbackFound
+      status: "False"
+      type: Fallback
+    - status: "False"
+      type: Paused
+    - message: HPA is actively scaling
+      reason: HPAActive
+      status: "True"
+      type: HPAActive
+    externalMetricNames:
+    - s0-prometheus
+    hpaName: keda-hpa-decode-scaler
+    lastActiveTime: "2026-10-09T23:53:10Z"
+    originalReplicaCount: 1
+    scaleTargetGVKR:
+      group: apps
+      kind: Deployment
+      resource: deployments
+      version: v1
+    scaleTargetKind: apps/v1.Deployment
+    triggersActivity:
+      s0-prometheus:
+        isActive: true
+    triggersTypes: prometheus
+- apiVersion: keda.sh/v1alpha1
+  kind: ScaledObject
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"keda.sh/v1alpha1","kind":"ScaledObject","metadata":{"annotations":{},"name":"prefill-scaler","namespace":"default"},"spec":{"maxReplicaCount":2,"minReplicaCount":1,"scaleTargetRef":{"name":"vllm-prefill"},"triggers":[{"metadata":{"query":"sum(orch_tokens_in_flight{phase=\"prefill\"})","serverAddress":"http://prometheus-server.monitoring.svc.cluster.local","threshold":"1"},"metricType":"AverageValue","type":"prometheus"}]}}
+    creationTimestamp: "2026-10-09T20:35:09Z"
+    finalizers:
+    - finalizer.keda.sh
+    generation: 5
+    labels:
+      scaledobject.keda.sh/name: prefill-scaler
+    name: prefill-scaler
+    namespace: default
+    resourceVersion: "9937"
+    uid: 502985f8-57c2-49ce-9cc3-b7b0cec4b374
+  spec:
+    maxReplicaCount: 1
+    minReplicaCount: 1
+    scaleTargetRef:
+      name: vllm-prefill
+    triggers:
+    - metadata:
+        query: sum(orch_tokens_in_flight{phase="prefill"})
+        serverAddress: http://prometheus-server.monitoring.svc.cluster.local
+        threshold: "1"
+      metricType: AverageValue
+      type: prometheus
+  status:
+    authenticationsTypes: ""
+    conditions:
+    - message: ScaledObject is defined correctly and is ready for scaling
+      reason: ScaledObjectReady
+      status: "True"
+      type: Ready
+    - message: Scaling is not performed because triggers are not active
+      reason: ScalerNotActive
+      status: "False"
+      type: Active
+    - message: No fallbacks are active on this scaled object
+      reason: NoFallbackFound
+      status: "False"
+      type: Fallback
+    - status: "False"
+      type: Paused
+    - message: HPA is actively scaling
+      reason: HPAActive
+      status: "True"
+      type: HPAActive
+    externalMetricNames:
+    - s0-prometheus
+    hpaName: keda-hpa-prefill-scaler
+    originalReplicaCount: 1
+    scaleTargetGVKR:
+      group: apps
+      kind: Deployment
+      resource: deployments
+      version: v1
+    scaleTargetKind: apps/v1.Deployment
+    triggersActivity:
+      s0-prometheus:
+        isActive: false
+    triggersTypes: prometheus
+kind: List
+metadata:
+  resourceVersion: ""

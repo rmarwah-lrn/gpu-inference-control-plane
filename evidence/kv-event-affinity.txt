@@ -1,0 +1,6 @@
+# TYPE orch_replica_prefix_affinity_available gauge
+# TYPE orch_replica_kv_event_age_seconds gauge
+orch_replica_prefix_affinity_available{pool="prefill",pod="text-0"} 0
+orch_replica_kv_event_age_seconds{pool="prefill",pod="text-0"} 1001.2962908744812
+orch_replica_prefix_affinity_available{pool="decode",pod="vision-0"} 0
+orch_replica_kv_event_age_seconds{pool="decode",pod="vision-0"} 1001.2835328578949

@@ -1,0 +1,4 @@
+NAME                            READY   STATUS    RESTARTS   AGE   IP           NODE             NOMINATED NODE   READINESS GATES
+orch-serve-6cc74f45c-lnmpg      1/1     Running   0          17m   10.42.0.38   158-101-125-80   <none>           <none>
+vllm-decode-7cc6886699-kq9gp    1/1     Running   0          33m   10.42.0.34   158-101-125-80   <none>           <none>
+vllm-prefill-5fcc76f798-mmvck   1/1     Running   0          33m   10.42.0.33   158-101-125-80   <none>           <none>

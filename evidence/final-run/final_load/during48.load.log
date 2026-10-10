@@ -1,0 +1,7 @@
+crew_flood rounds=48 workers=4 model=text
+  TEXT GPU Key-Value (KV) cache accelerates data access by storing frequently used data directly on the GPU memory, significantly reducing latency and improving comput
+  TEXT Planning ahead, I will create an itinerary for a three-day trip to explore the historical landmarks and natural beauty of Kyoto, Japan.
+  TEXT Certainly! Here are two facts about prefix caches sticking to a replica:
+
+1. **Redundancy and Availability**: Sticking to a replica ensures that the prefix
+  TEXT KEDA should add a decode replica when the decoded data requires additional processing or storage compared to the original event stream for specific use cases li

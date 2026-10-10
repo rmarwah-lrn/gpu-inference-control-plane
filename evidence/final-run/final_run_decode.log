@@ -1,0 +1,307 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347]        █     █     █▄   ▄█
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.31.0
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347]   █▄█▀ █     █     █     █  model   Qwen/Qwen2.5-3B-Instruct
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:347] 
+(APIServer pid=1) INFO 10-09 23:41:38 [api_utils.py:286] non-default args: {'model_tag': 'Qwen/Qwen2.5-3B-Instruct', 'host': '0.0.0.0', 'model': 'Qwen/Qwen2.5-3B-Instruct', 'max_model_len': 2048, 'served_model_name': ['Qwen/Qwen2.5-3B-Instruct', 'text'], 'gpu_memory_utilization': 0.5, 'enable_prefix_caching': True, 'max_num_batched_tokens': 512, 'max_num_seqs': 64, 'scheduling_policy': 'priority', 'enable_chunked_prefill': True, 'kv_transfer_config': KVTransferConfig(kv_connector='MooncakeConnector', engine_id='244a362d-5681-403b-b255-a6e6a6ff4f48', kv_buffer_device='cuda', kv_buffer_size=1000000000.0, kv_role='kv_consumer', kv_rank=None, kv_parallel_size=1, kv_ip='127.0.0.1', kv_port=14579, kv_connector_extra_config={'mooncake_protocol': 'tcp'}, kv_connector_module_path=None, enable_permute_local_kv=False, kv_load_failure_policy='recompute'), 'kv_events_config': KVEventsConfig(enable_kv_cache_events=True, publisher='zmq', endpoint='tcp://*:5557', replay_endpoint=None, buffer_steps=10000, hwm=100000, max_queue_size=100000, topic='kv-events')}
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_8000_TCP_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_5557_TCP_ADDR
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_SERVICE_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_8000_TCP_PROTO
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_SERVICE_PORT_KV_EVENTS
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_5557_TCP_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_5557_TCP_PROTO
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_SERVICE_HOST
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_8000_TCP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_5557_TCP_ADDR
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_5557_TCP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_SERVICE_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8998_TCP_ADDR
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_SERVICE_PORT_KV_EVENTS
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_5557_TCP_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_5557_TCP_PROTO
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8998_TCP_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8998_TCP_PROTO
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_SERVICE_PORT_BOOTSTRAP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_5557_TCP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8998_TCP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8000_TCP_ADDR
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_SERVICE_PORT_HTTP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8000_TCP_PORT
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8000_TCP_PROTO
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_SERVICE_HOST
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_PORT_8000_TCP_ADDR
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_DECODE_SERVICE_PORT_HTTP
+(APIServer pid=1) WARNING 10-09 23:41:38 [interface.py:1355] Unknown vLLM environment variable detected: VLLM_PREFILL_PORT_8000_TCP
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(APIServer pid=1) INFO 10-09 23:41:50 [model.py:699] Resolved architecture: Qwen2ForCausalLM
+(APIServer pid=1) INFO 10-09 23:41:50 [model.py:2109] Using max model len 2048
+(APIServer pid=1) INFO 10-09 23:41:50 [scheduler.py:308] Chunked prefill is enabled with max_num_batched_tokens=512.
+Parse safetensors files:   0%|          | 0/2 [00:00<?, ?it/s]Parse safetensors files:  50%|█████     | 1/2 [00:00<00:00,  1.94it/s]Parse safetensors files: 100%|██████████| 2/2 [00:00<00:00,  3.77it/s]
+(APIServer pid=1) INFO 10-09 23:41:51 [kernel.py:408] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])
+(EngineCore pid=211) INFO 10-09 23:42:04 [core.py:129] Initializing a V1 LLM engine (v0.31.0) with config: model='Qwen/Qwen2.5-3B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen2.5-3B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, aux_output_config=AuxOutputConfig(enable_return_routed_experts=False, max_bytes=None), kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=Qwen/Qwen2.5-3B-Instruct, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::qwen4_exp_ple_short_conv', 'vllm::qwen4_exp_qsa_with_output', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [512], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 128, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, moe_backend='auto', sparse_indexer_topk_backend='auto', linear_backend='auto', linear_backend_per_quant=None)
+(EngineCore pid=211) INFO 10-09 23:42:07 [parallel_state.py:1825] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_17a26a2084b9492692ad38bc8e022ecc backend=nccl
+(EngineCore pid=211) INFO 10-09 23:42:07 [parallel_state.py:2269] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, ETP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=211) INFO 10-09 23:42:07 [gpu_worker.py:479] Using V2 Model Runner
+(EngineCore pid=211) INFO 10-09 23:42:08 [model_runner.py:375] Loading model from scratch...
+(EngineCore pid=211) INFO 10-09 23:42:12 [cuda.py:526] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=211) INFO 10-09 23:42:12 [flash_attn.py:1167] Using FlashAttention version 2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(EngineCore pid=211) INFO 10-09 23:42:41 [weight_utils.py:523] Time spent downloading weights for Qwen/Qwen2.5-3B-Instruct: 28.216989 seconds
+(EngineCore pid=211) INFO 10-09 23:42:41 [weight_utils.py:1063] Filesystem type for checkpoints: OVERLAY. Checkpoint size: 5.75 GiB. Available RAM: 202.34 GiB.
+(EngineCore pid=211) INFO 10-09 23:42:41 [weight_utils.py:1086] Auto-prefetch is disabled because the filesystem (OVERLAY) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.74it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  1.88it/s]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  1.86it/s]
+
+(EngineCore pid=211) INFO 10-09 23:42:42 [default_loader.py:484] Loading weights took 1.18 seconds
+(EngineCore pid=211) INFO 10-09 23:42:43 [model_runner.py:407] Model loading took 5.79 GiB memory and 35.155530 seconds
+(EngineCore pid=211) INFO 10-09 23:42:43 [topk_topp_sampler.py:124] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=211) INFO 10-09 23:42:43 [torch_utils.py:286] Reducing Torch threads from 30 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=211) INFO 10-09 23:42:43 [mooncake_connector.py:526] MooncakeConnector setting KV cache layout to LBHNC for heterogeneous TP-safe KV transfer.
+(EngineCore pid=211) INFO 10-09 23:42:43 [utils.py:343] Using LBHNC KV cache layout.
+(EngineCore pid=211) INFO 10-09 23:42:51 [backends.py:1090] Using cache directory: /root/.cache/vllm/torch_compile_cache/d62814a3a7/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=211) INFO 10-09 23:42:51 [backends.py:1151] Dynamo bytecode transform time: 7.69 s
+(EngineCore pid=211) INFO 10-09 23:43:00 [backends.py:391] Compiling a graph for compile range (1, 512) takes 8.11 s
+(EngineCore pid=211) INFO 10-09 23:43:06 [backends.py:916] collected artifacts: 37 entries, 3 artifacts, 4778681 bytes total
+(EngineCore pid=211) INFO 10-09 23:43:06 [decorators.py:717] saved AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/f14641ff80438af5c41e144cb1a1b02fc500011d7e879ceb821ee800fb91d3b9/rank_0_0/model
+(EngineCore pid=211) INFO 10-09 23:43:06 [monitor.py:53] torch.compile took 21.89 s in total
+(EngineCore pid=211) INFO 10-09 23:43:06 [monitor.py:81] Initial profiling/warmup run took 0.16 s
+Capturing CUDA graphs (PIECEWISE):   0%|          | 0/19 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):  11%|█         | 2/19 [00:00<00:01, 12.83it/s]Capturing CUDA graphs (PIECEWISE):  21%|██        | 4/19 [00:00<00:01, 14.08it/s]Capturing CUDA graphs (PIECEWISE):  32%|███▏      | 6/19 [00:00<00:00, 14.59it/s]Capturing CUDA graphs (PIECEWISE):  42%|████▏     | 8/19 [00:00<00:00, 14.84it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 10/19 [00:00<00:00, 14.43it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 12/19 [00:00<00:00, 14.17it/s]Capturing CUDA graphs (PIECEWISE):  74%|███████▎  | 14/19 [00:01<00:00, 13.16it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 16/19 [00:01<00:00, 12.73it/s]Capturing CUDA graphs (PIECEWISE):  95%|█████████▍| 18/19 [00:01<00:00, 13.07it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 19/19 [00:01<00:00, 13.37it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 19.45it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 19.43it/s]
+(EngineCore pid=211) INFO 10-09 23:43:10 [model_runner.py:1087] Graph capturing finished in 2 secs, took 0.05 GiB
+(EngineCore pid=211) INFO 10-09 23:43:11 [gpu_worker.py:692] Available KV cache memory: 1.44 GiB
+(EngineCore pid=211) INFO 10-09 23:43:11 [gpu_worker.py:707] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.5000 is equivalent to --gpu-memory-utilization=0.4963 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.5037. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=211) INFO 10-09 23:43:11 [kv_cache_utils.py:2464] GPU KV cache size: 41,920 tokens, Maximum concurrency for 2,048 tokens per request: 20.47x
+(EngineCore pid=211) INFO 10-09 23:43:11 [factory.py:62] Creating v1 connector with name: MooncakeConnector and engine_id: 244a362d-5681-403b-b255-a6e6a6ff4f48
+(EngineCore pid=211) WARNING 10-09 23:43:11 [base.py:209] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+(EngineCore pid=211) INFO 10-09 23:43:11 [mooncake_connector.py:947] Initializing Mooncake Transfer Engine worker 244a362d-5681-403b-b255-a6e6a6ff4f48
+(EngineCore pid=211) INFO 10-09 23:43:11 [mooncake_connector.py:974] The Mooncake Transfer Engine is using tcp as its protocol.
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1009 23:43:11.032961   211 transfer_engine_py.cpp:120] Using default malloc/free for protocol: tcp
+I1009 23:43:11.033058   211 transfer_engine_impl.cpp:1046] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I1009 23:43:11.033070   211 transfer_engine_impl.cpp:116] Transfer Engine parseHostNameWithPort. server_name: 10.42.0.43 port: 12001
+I1009 23:43:11.033099   211 transfer_engine_impl.cpp:183] Transfer Engine RPC using P2P handshake, listening on 10.42.0.43:16151
+I1009 23:43:11.033224   211 transfer_engine_impl.cpp:259] Auto-discovering topology...
+W1009 23:43:11.033355   211 topology.cpp:205] No RDMA devices found, check your device installation
+I1009 23:43:11.033403   211 transfer_engine_impl.cpp:274] Topology discovery complete. Found 0 HCAs.
+E1009 23:43:11.033430   211 transfer_metadata.cpp:1098] Local segment descriptor not found
+I1009 23:43:11.033450   211 tcp_transport.cpp:391] TcpTransport: listen on port 16064
+I1009 23:43:11.033587   211 transfer_engine_impl.cpp:396] Using TCP transport (no HCA detected)
+(EngineCore pid=211) INFO 10-09 23:43:11 [mooncake_connector.py:1730] Registering KV_Caches. use_mla: False
+(EngineCore pid=211) INFO 10-09 23:43:11 [kernel_warmup.py:172] JIT kernel warmup starting.
+(EngineCore pid=211) INFO 10-09 23:43:11 [kernel_warmup.py:185] JIT kernel warmup finished in 0.00s.
+Capturing CUDA graphs (PIECEWISE):   0%|          | 0/19 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):  11%|█         | 2/19 [00:00<00:01, 16.41it/s]Capturing CUDA graphs (PIECEWISE):  21%|██        | 4/19 [00:00<00:00, 16.66it/s]Capturing CUDA graphs (PIECEWISE):  32%|███▏      | 6/19 [00:00<00:00, 17.00it/s]Capturing CUDA graphs (PIECEWISE):  42%|████▏     | 8/19 [00:00<00:00, 17.17it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 10/19 [00:00<00:00, 16.74it/s]Capturing CUDA graphs (PIECEWISE):  63%|██████▎   | 12/19 [00:00<00:00, 16.53it/s]Capturing CUDA graphs (PIECEWISE):  74%|███████▎  | 14/19 [00:00<00:00, 16.38it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 16/19 [00:00<00:00, 16.27it/s]Capturing CUDA graphs (PIECEWISE):  95%|█████████▍| 18/19 [00:01<00:00, 16.10it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 19/19 [00:01<00:00, 16.44it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/11 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  27%|██▋       | 3/11 [00:00<00:00, 19.51it/s]Capturing CUDA graphs (FULL):  55%|█████▍    | 6/11 [00:00<00:00, 19.63it/s]Capturing CUDA graphs (FULL):  73%|███████▎  | 8/11 [00:00<00:00, 19.66it/s]Capturing CUDA graphs (FULL):  91%|█████████ | 10/11 [00:00<00:00, 19.72it/s]Capturing CUDA graphs (FULL): 100%|██████████| 11/11 [00:00<00:00, 19.74it/s]
+(EngineCore pid=211) INFO 10-09 23:43:17 [model_runner.py:1087] Graph capturing finished in 3 secs, took 0.04 GiB
+(EngineCore pid=211) INFO 10-09 23:43:17 [gpu_worker.py:892] CUDA graph pool memory: 0.04 GiB (actual), 0.06 GiB (estimated), difference: 0.01 GiB (30.4%).
+(EngineCore pid=211) INFO 10-09 23:43:17 [gpu_worker.py:955] Free memory on device (15.59/16.0 GiB) on startup. Desired GPU memory utilization is (0.5, 8.0 GiB). Actual usage is 5.93 GiB for consumed memory (weights + non-torch), 0.63 GiB for peak activation, and 0.04 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=1340070912` (1.25 GiB) to fit into requested memory, or `--kv-cache-memory=9493797888` (8.84 GiB) to fully utilize gpu memory. Current kv cache memory in use is 1.44 GiB.
+(EngineCore pid=211) INFO 10-09 23:43:19 [jit_monitor.py:84] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=211) INFO 10-09 23:43:20 [core.py:373] init engine (profile, create kv cache, warmup model) took 36.93 s (compilation: 21.89 s)
+(EngineCore pid=211) INFO 10-09 23:43:20 [factory.py:62] Creating v1 connector with name: MooncakeConnector and engine_id: 244a362d-5681-403b-b255-a6e6a6ff4f48
+(EngineCore pid=211) WARNING 10-09 23:43:20 [base.py:209] Initializing KVConnectorBase_V1. This API is experimental and subject to change in the future as we iterate the design.
+(EngineCore pid=211) INFO 10-09 23:43:20 [mooncake_connector.py:667] Initializing Mooncake Transfer Engine Scheduler 244a362d-5681-403b-b255-a6e6a6ff4f48
+(EngineCore pid=211) INFO 10-09 23:43:20 [kv_events.py:379] Starting ZMQ publisher thread
+Parse safetensors files:   0%|          | 0/2 [00:00<?, ?it/s]Parse safetensors files:  50%|█████     | 1/2 [00:00<00:00,  1.94it/s]Parse safetensors files: 100%|██████████| 2/2 [00:00<00:00,  3.74it/s]
+(EngineCore pid=211) INFO 10-09 23:43:21 [kernel.py:408] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])
+(APIServer pid=1) INFO 10-09 23:43:21 [entry.py:132] Supported tasks: ['generate']
+(APIServer pid=1) INFO 10-09 23:43:22 [factories.py:76] Scale-out endpoints are disabled. Set --enable-scale-out to enable them.
+(APIServer pid=1) INFO 10-09 23:43:23 [hf.py:646] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=1) WARNING 10-09 23:43:23 [model.py:1850] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'repetition_penalty': 1.05, 'temperature': 0.7, 'top_k': 20, 'top_p': 0.8}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=1) INFO 10-09 23:43:23 [entry.py:136] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:60] Available routes are:
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /docs, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /load, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /version, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /kv_event_sources, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /health, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/messages, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /generative_scoring, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 10-09 23:43:23 [launcher.py:69] Route: /is_scaling_elastic_ep, Methods: POST
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     10.42.0.21:45450 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:60102 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:60734 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:52312 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:58514 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:60582 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:42258 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:60592 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:38548 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:53460 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:35092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:47488 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40590 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:48460 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:56358 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:48474 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:58754 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:34240 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:34808 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:57722 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:46900 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41232 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:53584 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41244 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:36516 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:51330 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:49168 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:54762 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:59708 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:37862 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:53566 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:37876 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:39598 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55058 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:47470 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:45392 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:38278 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:49378 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:50550 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:49384 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:42746 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:47278 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:51712 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55958 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:47838 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:35420 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40268 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:35426 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40564 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:35906 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:41832 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:46414 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:54652 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41548 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:56076 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41558 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:34380 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:47740 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:50092 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:54528 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:44224 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:53908 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40510 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:53916 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:59246 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:52546 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:55824 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:38548 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:41498 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:35176 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:48712 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:35192 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:56482 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:51084 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:34094 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:46238 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:47294 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:33006 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:46208 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:33022 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40112 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:33290 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:55098 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:34962 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:46464 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:40234 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:46472 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:40250 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:50392 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:56442 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:33998 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:46712 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:49906 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:49766 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:41240 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:49782 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:55934 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:43932 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:37802 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:43418 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:51396 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:39560 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:48664 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:39568 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:53676 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:51764 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:59010 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:34316 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:59754 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55256 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:60122 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55268 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:49874 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:49804 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:39670 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:48506 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:58960 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:53198 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:53106 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:53212 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:40452 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:43938 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:35448 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:59388 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:43714 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55406 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:35964 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:55414 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:44774 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:45626 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:52570 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:57562 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:38580 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:34636 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:38950 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:34638 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:49778 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:43686 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:58312 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:44146 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:53332 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:47772 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:42386 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:47776 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:41978 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:37634 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:56510 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:38104 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:52722 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41966 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:47734 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:41970 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:47486 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:56822 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:37474 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:37156 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:34740 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:50728 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:42152 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.47:50730 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     10.42.0.21:50364 - "GET /metrics HTTP/1.1" 200 OK

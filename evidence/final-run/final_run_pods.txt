@@ -1,0 +1,5 @@
+NAME                           READY   STATUS    RESTARTS      AGE     IP           NODE            NOMINATED NODE   READINESS GATES
+open-webui-84c7dff98b-bhs4c    1/1     Running   0             3h18m   10.42.0.18   129-146-58-49   <none>           <none>
+orch-serve-c4f6c8695-fdnbc     1/1     Running   0             11m     10.42.0.47   129-146-58-49   <none>           <none>
+vllm-decode-7469cf8894-zpc85   1/1     Running   2 (12m ago)   20m     10.42.0.43   129-146-58-49   <none>           <none>
+vllm-prefill-cd7bdbdb8-dkmdj   1/1     Running   0             3h18m   10.42.0.17   129-146-58-49   <none>           <none>

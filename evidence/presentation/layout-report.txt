@@ -1,0 +1,96 @@
+[error] slide-01.layout.json:text-text:2:7: THE CONTROL PLANE MET | THE FAILURE FIRST overlaps LIVE RUN by 1296px.
+    - shape THE CONTROL PLANE MET | THE FAILURE FIRST bbox=[72,88,850,150]
+    - shape LIVE RUN bbox=[850,120,180,18]
+[error] slide-01.layout.json:text-text:2:8: THE CONTROL PLANE MET | THE FAILURE FIRST overlaps A100 by 3024px.
+    - shape THE CONTROL PLANE MET | THE FAILURE FIRST bbox=[72,88,850,150]
+    - shape A100 bbox=[850,168,200,42]
+[error] slide-01.layout.json:text-text:2:9: THE CONTROL PLANE MET | THE FAILURE FIRST overlaps 40 GB SXM4 by 1728px.
+    - shape THE CONTROL PLANE MET | THE FAILURE FIRST bbox=[72,88,850,150]
+    - shape 40 GB SXM4 bbox=[850,211,200,24]
+[warning] slide-01.layout.json:tight-text:13: max concurrency | @ 2,048 tokens text box is tight: height 24px for 2 line(s) at 12px.
+    - shape max concurrency | @ 2,048 tokens bbox=[850,395,200,24]
+[error] slide-01.layout.json:box-bottom-pad:6:15: Transfer failure surfaced | before HBM exhaustion. has only 2px bottom padding inside its containing box; expected at least 16px.
+    - shape order 6 bbox=[820,90,330,430]
+    - shape Transfer failure surfaced | before HBM exhaustion. bbox=[850,474,250,44]
+[warning] slide-02.layout.json:tight-text:31: system prompt + tool schema → prefix cache candidate text box is tight: height 18px for 1 line(s) at 16px.
+    - shape system prompt + tool schema → prefix cache candidate bbox=[112,497,500,18]
+[warning] slide-02.layout.json:tight-text:34: user + thought + tool observations → KV grows text box is tight: height 18px for 1 line(s) at 16px.
+    - shape user + thought + tool observations → KV grows bbox=[712,497,400,18]
+[warning] slide-03.layout.json:tight-text:4: The paper limit was KV, but the live engine exposed a smaller usable boundary. text box is tight: height 78px for 2 line(s) at 34px.
+    - shape The paper limit was KV, but the live engine exposed a smaller usable boundary. bbox=[72,86,1130,78]
+[warning] slide-04.layout.json:tight-text:20: vLLM waiting / running / preempt | MooncakeConnector KV handoff text box is tight: height 54px for 4 line(s) at 17px.
+    - shape vLLM waiting / running / preempt | MooncakeConnector KV handoff bbox=[943,350,195,54]
+[warning] slide-04.layout.json:tight-text:23: Prometheus scrapes gateway + vLLM + Mooncake + DCGM; Grafana makes policy and engine state comparable. text box is tight: height 30px for 2 line(s) at 17px.
+    - shape Prometheus scrapes gateway + vLLM + Mooncake + DCGM; Grafana makes policy and engine state comparabl bbox=[300,526,770,30]
+[error] slide-05.layout.json:text-text:10:30: bad model · empty prompt | prompt too long → 400 overlaps NOT GATEWAY LOGIC by 2520px.
+    - shape bad model · empty prompt | prompt too long → 400 bbox=[520,267,520,38]
+    - shape NOT GATEWAY LOGIC bbox=[900,286,220,18]
+[error] slide-05.layout.json:text-text:16:31: tenant cap · timeout_queue | kv_free · no eligible pod overlaps FCFS | continuous batching | chunked prefill | preemption | block-table management by 5320px.
+    - shape tenant cap · timeout_queue | kv_free · no eligible pod bbox=[520,351,520,38]
+    - shape FCFS | continuous batching | chunked prefill | preemption | block-table management bbox=[900,330,210,130]
+[error] slide-05.layout.json:text-text:22:31: filter stale/unhealthy | prefix + load score overlaps FCFS | continuous batching | chunked prefill | preemption | block-table management by 3500px.
+    - shape filter stale/unhealthy | prefix + load score bbox=[520,435,520,38]
+    - shape FCFS | continuous batching | chunked prefill | preemption | block-table management bbox=[900,330,210,130]
+[error] slide-05.layout.json:text-text:28:33: Mooncake transfer | transactional commit overlaps These remain inside | the vLLM engine. by 3920px.
+    - shape Mooncake transfer | transactional commit bbox=[520,519,520,38]
+    - shape These remain inside | the vLLM engine. bbox=[900,505,190,42]
+[warning] slide-05.layout.json:tight-text:7: 01 text box is tight: height 20px for 1 line(s) at 18px.
+    - shape 01 bbox=[75,274,74,20]
+[warning] slide-05.layout.json:tight-text:13: 02 text box is tight: height 20px for 1 line(s) at 18px.
+    - shape 02 bbox=[75,358,74,20]
+[warning] slide-05.layout.json:tight-text:19: 03 text box is tight: height 20px for 1 line(s) at 18px.
+    - shape 03 bbox=[75,442,74,20]
+[warning] slide-05.layout.json:tight-text:25: 04 text box is tight: height 20px for 1 line(s) at 18px.
+    - shape 04 bbox=[75,526,74,20]
+[warning] slide-07.layout.json:tight-text:29: GPU memory ≈ 8.3 GiB | then ≈ 16.6 GiB with recompute |  | No HBM exhaustion was observed. text box is tight: height 100px for 6 line(s) at 19px.
+    - shape GPU memory ≈ 8.3 GiB | then ≈ 16.6 GiB with recompute |  | No HBM exhaustion was observed. bbox=[830,350,260,100]
+[warning] slide-07.layout.json:tight-text:30: First bottleneck: transfer coordination. text box is tight: height 25px for 2 line(s) at 14px.
+    - shape First bottleneck: transfer coordination. bbox=[830,466,260,25]
+[error] slide-07.layout.json:box-bottom-pad:27:30: First bottleneck: transfer coordination. has only 7px bottom padding inside its containing box; expected at least 16px.
+    - shape order 27 bbox=[805,278,325,220]
+    - shape First bottleneck: transfer coordination. bbox=[830,466,260,25]
+[warning] slide-07.layout.json:split-inline:9:10: 12 and completed look like manually split inline text.
+    - shape 12 bbox=[590,292,40,18]
+    - shape completed bbox=[640,293,120,18]
+[warning] slide-07.layout.json:split-inline:13:14: 18 and kv_transfer_failed look like manually split inline text.
+    - shape 18 bbox=[590,346,40,18]
+    - shape kv_transfer_failed bbox=[640,347,120,18]
+[warning] slide-07.layout.json:split-inline:17:18: 66 and no_eligible_pod look like manually split inline text.
+    - shape 66 bbox=[590,400,40,18]
+    - shape no_eligible_pod bbox=[640,401,120,18]
+[warning] slide-07.layout.json:split-inline:21:22: 4 and completed look like manually split inline text.
+    - shape 4 bbox=[590,454,40,18]
+    - shape completed bbox=[640,455,120,18]
+[warning] slide-07.layout.json:split-inline:25:26: 4 and kv_transfer_failed look like manually split inline text.
+    - shape 4 bbox=[590,508,40,18]
+    - shape kv_transfer_failed bbox=[640,509,120,18]
+[warning] slide-08.layout.json:tight-text:4: Recompute contained the blast radius; synchronization remains an engine problem. text box is tight: height 78px for 2 line(s) at 34px.
+    - shape Recompute contained the blast radius; synchronization remains an engine problem. bbox=[72,86,1130,78]
+[warning] slide-08.layout.json:tight-text:12: transfer metadata | + blocks text box is tight: height 35px for 2 line(s) at 16px.
+    - shape transfer metadata | + blocks bbox=[312,350,150,35]
+[warning] slide-08.layout.json:tight-text:16: remote load | may fail text box is tight: height 35px for 2 line(s) at 16px.
+    - shape remote load | may fail bbox=[537,350,150,35]
+[warning] slide-08.layout.json:tight-text:24: stale request id | → restart risk text box is tight: height 35px for 2 line(s) at 16px.
+    - shape stale request id | → restart risk bbox=[987,350,150,35]
+[warning] slide-08.layout.json:box-bottom-pad:6:8: produces KV has only 10px bottom padding inside its containing box; expected at least 12px.
+    - shape order 6 bbox=[72,300,180,95]
+    - shape produces KV bbox=[87,350,150,35]
+[warning] slide-08.layout.json:box-bottom-pad:10:12: transfer metadata | + blocks has only 10px bottom padding inside its containing box; expected at least 16px.
+    - shape order 10 bbox=[297,300,180,95]
+    - shape transfer metadata | + blocks bbox=[312,350,150,35]
+[warning] slide-08.layout.json:box-bottom-pad:14:16: remote load | may fail has only 10px bottom padding inside its containing box; expected at least 16px.
+    - shape order 14 bbox=[522,300,180,95]
+    - shape remote load | may fail bbox=[537,350,150,35]
+[warning] slide-08.layout.json:box-bottom-pad:18:20: request removed has only 10px bottom padding inside its containing box; expected at least 12px.
+    - shape order 18 bbox=[747,300,180,95]
+    - shape request removed bbox=[762,350,150,35]
+[warning] slide-08.layout.json:box-bottom-pad:22:24: stale request id | → restart risk has only 10px bottom padding inside its containing box; expected at least 16px.
+    - shape order 22 bbox=[972,300,180,95]
+    - shape stale request id | → restart risk bbox=[987,350,150,35]
+[warning] slide-10.layout.json:tight-text:8: guard · admit | place · handoff | stay vs leave text box is tight: height 80px for 3 line(s) at 26px.
+    - shape guard · admit | place · handoff | stay vs leave bbox=[100,340,210,80]
+[warning] slide-10.layout.json:tight-text:11: KV transfer failed | before HBM exhausted | recompute contained it text box is tight: height 80px for 3 line(s) at 24px.
+    - shape KV transfer failed | before HBM exhausted | recompute contained it bbox=[503,340,260,80]
+[warning] slide-10.layout.json:tight-text:15: The live proof is the point: policy decisions are only useful when the metrics let you explain what happened next. text box is tight: height 36px for 2 line(s) at 20px.
+    - shape The live proof is the point: policy decisions are only useful when the metrics let you explain what  bbox=[76,530,980,36]
+Checked 10 layout file(s): 9 error(s), 29 warning(s).

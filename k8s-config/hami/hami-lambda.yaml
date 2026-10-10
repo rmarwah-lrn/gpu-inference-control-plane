@@ -1,0 +1,227 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-prefill
+  labels:
+    app: vllm-prefill
+    phase: prefill
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: vllm-prefill
+  template:
+    metadata:
+      labels:
+        app: vllm-prefill
+        phase: prefill
+        inference.networking.x-k8s.io/inferencepool: prefill
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      schedulerName: hami-scheduler
+      volumes:
+        - name: mooncake-entrypoint
+          hostPath:
+            path: /home/ubuntu/class10/setup/vllm_mooncake_entrypoint.sh
+            type: File
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:v0.31.0
+          command: ["/usr/local/bin/vllm-mooncake-entrypoint"]
+          volumeMounts:
+            - name: mooncake-entrypoint
+              mountPath: /usr/local/bin/vllm-mooncake-entrypoint
+          args:
+            - Qwen/Qwen2.5-3B-Instruct
+            - --served-model-name
+            - Qwen/Qwen2.5-3B-Instruct
+            - text
+            - --host
+            - 0.0.0.0
+            - --port
+            - "8000"
+            - --enable-prefix-caching
+            - --enable-chunked-prefill
+            - --max-num-batched-tokens
+            - "1024"
+            - --scheduling-policy
+            - priority
+            - --max-model-len
+            - "2048"
+            - --max-num-seqs
+            - "32"
+            - --kv-transfer-config
+            - '{"kv_connector":"MooncakeConnector","kv_role":"kv_producer","kv_connector_extra_config":{"mooncake_protocol":"tcp"}}'
+            - --kv-events-config
+            - '{"enable_kv_cache_events":true,"publisher":"zmq","endpoint":"tcp://*:5557","topic":"kv-events"}'
+            - --gpu-memory-utilization
+            - "0.50"
+            - --tensor-parallel-size
+            - "1"
+            - --pipeline-parallel-size
+            - "1"
+            - --data-parallel-size
+            - "1"
+          env:
+            - name: VLLM_MOONCAKE_BOOTSTRAP_PORT
+              value: "8998"
+            - name: WITH_NVIDIA_PEERMEM
+              value: "0"
+            - name: HUGGING_FACE_HUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+          ports:
+            - containerPort: 8000
+              hostPort: 8000
+            - containerPort: 8998
+              hostPort: 8998
+            - containerPort: 5557
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+              nvidia.com/gpumem: "16384"
+              nvidia.com/gpucores: "55"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-decode
+  labels:
+    app: vllm-decode
+    phase: decode
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: vllm-decode
+  template:
+    metadata:
+      labels:
+        app: vllm-decode
+        phase: decode
+        inference.networking.x-k8s.io/inferencepool: decode
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      schedulerName: hami-scheduler
+      volumes:
+        - name: mooncake-entrypoint
+          hostPath:
+            path: /home/ubuntu/class10/setup/vllm_mooncake_entrypoint.sh
+            type: File
+      containers:
+        - name: vllm
+          image: vllm/vllm-openai:v0.31.0
+          command: ["/usr/local/bin/vllm-mooncake-entrypoint"]
+          volumeMounts:
+            - name: mooncake-entrypoint
+              mountPath: /usr/local/bin/vllm-mooncake-entrypoint
+          args:
+            - Qwen/Qwen2.5-3B-Instruct
+            - --served-model-name
+            - Qwen/Qwen2.5-3B-Instruct
+            - text
+            - --host
+            - 0.0.0.0
+            - --port
+            - "8000"
+            - --enable-prefix-caching
+            - --enable-chunked-prefill
+            - --max-num-batched-tokens
+            - "512"
+            - --scheduling-policy
+            - priority
+            - --max-model-len
+            - "2048"
+            - --max-num-seqs
+            - "64"
+            - --kv-transfer-config
+            - '{"kv_connector":"MooncakeConnector","kv_role":"kv_consumer","kv_load_failure_policy":"recompute","kv_connector_extra_config":{"mooncake_protocol":"tcp"}}'
+            - --kv-events-config
+            - '{"enable_kv_cache_events":true,"publisher":"zmq","endpoint":"tcp://*:5557","topic":"kv-events"}'
+            - --gpu-memory-utilization
+            - "0.50"
+            - --tensor-parallel-size
+            - "1"
+            - --pipeline-parallel-size
+            - "1"
+            - --data-parallel-size
+            - "1"
+          env:
+            - name: WITH_NVIDIA_PEERMEM
+              value: "0"
+            - name: HUGGING_FACE_HUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-token
+                  key: token
+                  optional: true
+          ports:
+            - containerPort: 8000
+              hostPort: 8001
+            - containerPort: 5557
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+              nvidia.com/gpumem: "16384"
+              nvidia.com/gpucores: "35"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vllm-prefill
+spec:
+  selector:
+    app: vllm-prefill
+  ports:
+    - port: 8000
+      name: http
+      nodePort: 30800
+    - port: 8998
+      name: bootstrap
+      targetPort: 8998
+    - port: 5557
+      name: kv-events
+      targetPort: 5557
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vllm-decode
+spec:
+  selector:
+    app: vllm-decode
+  ports:
+    - port: 8000
+      name: http
+      nodePort: 30801
+    - port: 5557
+      name: kv-events
+      targetPort: 5557
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mooncake-store
+spec:
+  selector:
+    app: mooncake-store
+  ports:
+    - port: 50051
+      name: mooncake
+      nodePort: 30551
+  type: NodePort

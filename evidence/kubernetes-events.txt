@@ -1,0 +1,72 @@
+LAST SEEN   TYPE      REASON                   OBJECT                               MESSAGE
+29m         Normal    Scheduled                pod/vllm-decode-7cc6886699-kq9gp     Successfully assigned default/vllm-decode-7cc6886699-kq9gp to 158-101-125-80
+33m         Warning   FailedScheduling         pod/vllm-decode-7cc6886699-kq9gp     0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+20m         Normal    Scheduled                pod/orch-serve-77cbff6cfc-wwv4l      Successfully assigned default/orch-serve-77cbff6cfc-wwv4l to 158-101-125-80
+26m         Warning   FailedScheduling         pod/orch-serve-d5bcbd86f-jxm6p       0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+24m         Warning   FailedScheduling         pod/orch-serve-d5bcbd86f-skdfm       0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+29m         Normal    Scheduled                pod/vllm-prefill-5fcc76f798-mmvck    Successfully assigned default/vllm-prefill-5fcc76f798-mmvck to 158-101-125-80
+17m         Normal    Scheduled                pod/orch-serve-6cc74f45c-lnmpg       Successfully assigned default/orch-serve-6cc74f45c-lnmpg to 158-101-125-80
+33m         Warning   FailedScheduling         pod/vllm-prefill-5fcc76f798-mmvck    0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+19m         Normal    Scheduled                pod/orch-serve-656cb4d5d5-k5xj4      Successfully assigned default/orch-serve-656cb4d5d5-k5xj4 to 158-101-125-80
+24m         Normal    Scheduled                pod/orch-serve-d5bcbd86f-skdfm       Successfully assigned default/orch-serve-d5bcbd86f-skdfm to 158-101-125-80
+33m         Normal    Scheduled                pod/orch-serve-5c79b67966-qxq64      Successfully assigned default/orch-serve-5c79b67966-qxq64 to 158-101-125-80
+33m         Normal    SuccessfulCreate         replicaset/vllm-prefill-5fcc76f798   Created pod: vllm-prefill-5fcc76f798-mmvck
+33m         Normal    ScalingReplicaSet        deployment/vllm-decode               Scaled up replica set vllm-decode-7cc6886699 from 0 to 1
+33m         Normal    ScalingReplicaSet        deployment/vllm-prefill              Scaled up replica set vllm-prefill-5fcc76f798 from 0 to 1
+33m         Normal    SuccessfulCreate         replicaset/vllm-decode-7cc6886699    Created pod: vllm-decode-7cc6886699-kq9gp
+33m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled up replica set orch-serve-5c79b67966 from 0 to 1
+33m         Normal    SuccessfulCreate         replicaset/orch-serve-5c79b67966     Created pod: orch-serve-5c79b67966-qxq64
+33m         Warning   FailedToCreateEndpoint   endpoints/orch-serve                 Failed to create endpoint for service default/orch-serve: endpoints "orch-serve" already exists
+33m         Normal    Pulling                  pod/orch-serve-5c79b67966-qxq64      Pulling image "python:3.12-slim"
+33m         Normal    Started                  pod/orch-serve-5c79b67966-qxq64      Container started
+33m         Normal    Created                  pod/orch-serve-5c79b67966-qxq64      Container created
+33m         Normal    Pulled                   pod/orch-serve-5c79b67966-qxq64      Successfully pulled image "python:3.12-slim" in 1.646s (1.646s including waiting). Image size: 43277070 bytes.
+29m         Normal    Killing                  pod/vllm-prefill-78d967ff46-nz6kl    Stopping container vllm
+29m         Normal    Killing                  pod/vllm-decode-548dd896d9-mwf9f     Stopping container vllm
+29m         Normal    ScalingReplicaSet        deployment/vllm-prefill              Scaled down replica set vllm-prefill-78d967ff46 from 1 to 0
+29m         Normal    SuccessfulDelete         replicaset/vllm-prefill-78d967ff46   Deleted pod: vllm-prefill-78d967ff46-nz6kl
+29m         Normal    SuccessfulDelete         replicaset/vllm-decode-548dd896d9    Deleted pod: vllm-decode-548dd896d9-mwf9f
+29m         Normal    ScalingReplicaSet        deployment/vllm-decode               Scaled down replica set vllm-decode-548dd896d9 from 1 to 0
+29m         Normal    FilteringSucceed         pod/vllm-prefill-5fcc76f798-mmvck    find fit node(158-101-125-80), 0 nodes not fit, 1 nodes fit(158-101-125-80:10.00)
+29m         Normal    Created                  pod/vllm-prefill-5fcc76f798-mmvck    Container created
+29m         Normal    BindingSucceed           pod/vllm-prefill-5fcc76f798-mmvck    Successfully binding node [158-101-125-80] to default/vllm-prefill-5fcc76f798-mmvck
+29m         Normal    FilteringSucceed         pod/vllm-decode-7cc6886699-kq9gp     find fit node(158-101-125-80), 0 nodes not fit, 1 nodes fit(158-101-125-80:12.00)
+29m         Normal    Pulled                   pod/vllm-prefill-5fcc76f798-mmvck    Container image "vllm/vllm-openai:v0.31.0" already present on machine and can be accessed by the pod
+29m         Normal    BindingSucceed           pod/vllm-decode-7cc6886699-kq9gp     Successfully binding node [158-101-125-80] to default/vllm-decode-7cc6886699-kq9gp
+29m         Normal    Started                  pod/vllm-prefill-5fcc76f798-mmvck    Container started
+29m         Normal    Pulled                   pod/vllm-decode-7cc6886699-kq9gp     Container image "vllm/vllm-openai:v0.31.0" already present on machine and can be accessed by the pod
+29m         Normal    Created                  pod/vllm-decode-7cc6886699-kq9gp     Container created
+29m         Normal    Started                  pod/vllm-decode-7cc6886699-kq9gp     Container started
+26m         Normal    SuccessfulCreate         replicaset/orch-serve-d5bcbd86f      Created pod: orch-serve-d5bcbd86f-jxm6p
+26m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled up replica set orch-serve-d5bcbd86f from 0 to 1
+24m         Normal    SuccessfulCreate         replicaset/orch-serve-d5bcbd86f      Created pod: orch-serve-d5bcbd86f-skdfm
+24m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled down replica set orch-serve-5c79b67966 from 1 to 0
+24m         Normal    SuccessfulDelete         replicaset/orch-serve-5c79b67966     Deleted pod: orch-serve-5c79b67966-qxq64
+24m         Normal    Killing                  pod/orch-serve-5c79b67966-qxq64      Stopping container orch
+24m         Normal    Started                  pod/orch-serve-d5bcbd86f-skdfm       Container started
+24m         Normal    Created                  pod/orch-serve-d5bcbd86f-skdfm       Container created
+24m         Normal    Pulled                   pod/orch-serve-d5bcbd86f-skdfm       Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+21m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled down replica set orch-serve-d5bcbd86f from 1 to 0
+21m         Normal    SuccessfulDelete         replicaset/orch-serve-d5bcbd86f      Deleted pod: orch-serve-d5bcbd86f-skdfm
+21m         Normal    Killing                  pod/orch-serve-d5bcbd86f-skdfm       Stopping container orch
+20m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled up replica set orch-serve-77cbff6cfc from 0 to 1
+20m         Normal    SuccessfulCreate         replicaset/orch-serve-77cbff6cfc     Created pod: orch-serve-77cbff6cfc-wwv4l
+20m         Normal    Pulled                   pod/orch-serve-77cbff6cfc-wwv4l      Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+20m         Normal    Created                  pod/orch-serve-77cbff6cfc-wwv4l      Container created
+20m         Normal    Started                  pod/orch-serve-77cbff6cfc-wwv4l      Container started
+19m         Normal    Killing                  pod/orch-serve-77cbff6cfc-wwv4l      Stopping container orch
+19m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled down replica set orch-serve-77cbff6cfc from 1 to 0
+19m         Normal    SuccessfulDelete         replicaset/orch-serve-77cbff6cfc     Deleted pod: orch-serve-77cbff6cfc-wwv4l
+19m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled up replica set orch-serve-656cb4d5d5 from 0 to 1
+19m         Normal    Pulled                   pod/orch-serve-656cb4d5d5-k5xj4      Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+19m         Normal    Created                  pod/orch-serve-656cb4d5d5-k5xj4      Container created
+19m         Normal    SuccessfulCreate         replicaset/orch-serve-656cb4d5d5     Created pod: orch-serve-656cb4d5d5-k5xj4
+19m         Normal    Started                  pod/orch-serve-656cb4d5d5-k5xj4      Container started
+18m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled down replica set orch-serve-656cb4d5d5 from 1 to 0
+18m         Normal    SuccessfulDelete         replicaset/orch-serve-656cb4d5d5     Deleted pod: orch-serve-656cb4d5d5-k5xj4
+18m         Normal    Killing                  pod/orch-serve-656cb4d5d5-k5xj4      Stopping container orch
+17m         Normal    SuccessfulCreate         replicaset/orch-serve-6cc74f45c      Created pod: orch-serve-6cc74f45c-lnmpg
+17m         Normal    Pulled                   pod/orch-serve-6cc74f45c-lnmpg       Container image "python:3.12-slim" already present on machine and can be accessed by the pod
+17m         Normal    Created                  pod/orch-serve-6cc74f45c-lnmpg       Container created
+17m         Normal    ScalingReplicaSet        deployment/orch-serve                Scaled up replica set orch-serve-6cc74f45c from 0 to 1
+17m         Normal    Started                  pod/orch-serve-6cc74f45c-lnmpg       Container started
